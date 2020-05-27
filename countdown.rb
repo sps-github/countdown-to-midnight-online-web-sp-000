@@ -8,6 +8,9 @@ def countdown(seconds_countdown)
 end
 
 def countdown_with_sleep(seconds)
-  time = Time.now
-  sleep 1 until Time.now += 1
+  while seconds_countdown > 0
+    seconds_countdown -= 1
+    sleep 1
+  end
+  puts "HAPPY NEW YEAR!"
 end
